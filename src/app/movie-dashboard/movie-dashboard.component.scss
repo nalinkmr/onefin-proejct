@@ -1,0 +1,232 @@
+.select-class {
+    background: #f8f8f8 !important;
+    box-shadow: 0px 0px 7px 5px rgba(0, 50, 100, 0.1) !important;
+  }
+  .onhovereffect:hover {
+    transform: scale(1.02);
+  }
+  
+  .card-imageclass {
+    max-width: 35% !important;
+    margin-left: 3% !important;
+    margin-bottom: 5%;
+  }
+  .imageclass1 {
+    width: 100%;
+    height: 175px;
+  }
+  .scrollpage {
+    overflow-y: none;
+    max-height: none;
+    height: none;
+  }
+  .select-class1 {
+    background: #f8f8f8 !important;
+    box-shadow: 0px 0px 7px 5px rgba(0, 50, 100, 0.1) !important;
+    cursor: pointer;
+    width: 100%;
+    height: 95%;
+  }
+  
+  .headertext {
+    text-align: center;
+    background-color: #fff;
+    z-index: 800;
+  }
+  .button-class {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    letter-spacing: 2px;
+  }
+  .table th {
+    padding: 0.2rem !important;
+  }
+  
+  .tickmarkstyle {
+    font-size: 1.5em !important;
+    border-radius: 100%;
+    background: #ddd;
+    position: absolute;
+    top: 4px;
+    right: 19px;
+    cursor: pointer;
+  }
+  .tickmarkstyle-shapes {
+    font-size: 1.7em !important;
+    border-radius: 100%;
+    position: absolute;
+    top: 8px;
+    color: #3e3e3e;
+    right: 22px;
+    cursor: pointer;
+    background: #fff;
+  }
+  .imageheight {
+    height: 134px;
+    width: 100%;
+  }
+  
+  .image-heading-class {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.07em;
+    color: rgba(0, 0, 0, 0.63);
+  }
+  .temp-heading-class{
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.63);
+    font-weight: 600;
+  }  
+  .image-heading-class1 {
+    letter-spacing: 2px;
+    font-size: 1.07em;
+    color: rgba(0, 0, 0, 0.63);
+    font-weight: 600;
+  }
+  .icon_colr1 {
+    color: #fff;
+    opacity: 1;
+    border-radius: 7px;
+  }
+  
+  .icon_txt1 {
+    font-size: 1.2em;
+    text-align: center;
+    font-family: inherit;
+  }
+  
+  .shape_active {
+    background-color: #62b6c8;
+    color: #fff;
+  }
+  
+  .L-shape_active {
+    background-repeat: no-repeat;
+  }
+  
+  
+  .icon_txt {
+    font-family: inherit;
+    font-size: 1.3em;
+    text-align: center;
+  }
+  
+  .common-shape {
+    width: 90px;
+    min-height: 90px;
+    margin: 0% 0% 1% 22%;
+  }
+  
+  .icon_selected {
+    background-color: #62b6c8;
+    padding: 15% 0% 16% 20%;
+  }
+  
+  .icon_ntselected {
+    border: none;
+    padding: 3% 15%;
+    width: 100%;
+    background: #1a9ba7db;
+  }
+  
+  .shape_active {
+    background-color: #62b6c8;
+    color: #fff;
+  }
+  
+  .icon_txt {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  
+  .icon_txt1 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  .icon_colr1 {
+    color: #fff;
+    opacity: 1;
+    border-radius: 7px;
+  }
+  
+  .L-shape-dimension {
+    width: 48px;
+    height: 48px;
+  }
+  @media only screen and (min-device-width: 360px) and (max-device-width: 823px) {
+    .mobilepadding {
+      padding-bottom: 4%;
+    }
+    .icon_ntselected {
+      border: none;
+      padding: 4% 28%;
+      width: 100%;
+      background: #1a9ba7db;
+    }
+  }
+  
+  .heading-class {
+    letter-spacing: 3px;
+    color: rgb(255 255 255);
+    height: 39px;
+    font-weight: 600;
+    background-color: #0000009c;
+    font-family: none;
+  }
+  
+  .headStyle{
+    font-family: monospace;
+  }
+
+  .subHead{
+    color: #6faeb9;
+  }
+
+  .icon-class{
+    font-size: 6rem;
+    margin-top: 30%;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 100%;
+    margin-bottom: 30%;
+  }
+  
+  .create-class {
+    background: #f8f8f8 !important;
+    box-shadow: 0px 0px 7px 5px rgba(0, 50, 100, 0.1) !important;
+  }
+  
+//   search bar css
+.has-search .form-control {
+    padding-left: 2.375rem;
+  }
+  
+  .alignMid{
+    vertical-align: middle !important;
+  }
+  
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+  .cancel-icon {
+    position: absolute;
+    margin-left: 95%;
+    margin-top: 10px;
+    color: #3e3e3e9e;
+  }
+  
+  .search-class {
+    border-radius: 20px;
+    width: 108%;
+  }

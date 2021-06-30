@@ -1,0 +1,85 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand"></a>
+    <form class="form-inline">
+      <button class="btn btn-outline-success my-2 my-sm-0" (click)=logout()>LOGOUT</button>
+    </form>
+  </nav>
+<br><br>
+<div class="container ">
+    <div>
+      <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '10px',fullScreenBackdrop :true }"></ngx-loading>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      </div>
+      </div>
+      <h5 class="mb-2 heading-class">MOVIE TYPE</h5>
+        <!-- reload -->
+      <div *ngIf="reload === true" class=" col-md-1 col-lg-1 col-sm-4 col-xs-4 col-xl-1 " class="addcustomerbutton-classpadding">{{reload}} 
+        <button  mat-raised-button class="addcustomerbutton-class button-class" (click)="reloadPageContent()"><i
+            class="material-icons">refresh</i></button>
+      </div>
+      <hr>
+      <!-- search bar -->
+      <div class="col-md-11 col-lg-11 col-sm-8 col-xs-8 col-xl-11 search-hero mb-3 w-100 has-search search-class ">
+        <span *ngIf="searchKey" (click)="clearSearch()" class="fa fa-times cancel-icon " aria-hidden="true"></span> <span
+          class="fa fa-search form-control-feedback"></span>
+        <input class="form-control highlight " type="text" autocomplete="off" [(ngModel)]="searchKey"
+          placeholder="Search by movie title">
+      </div>
+      
+      <hr>
+      <br>
+      <div>
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '10px',fullScreenBackdrop :true }"></ngx-loading>
+      </div>
+      
+      <!-- movie  list  display -->
+      <div class="row" *ngIf="reload === false">
+        <div  (click)="editCustomerInfo(movie)" class=" d-flex flex-column col-lg-4 col-md-4 col-sm-12 col-xs-12  mobilepadding onhovereffect" *ngFor="let movie of searchKey?.length > 3 ? (movieArray | filter : searchKey)  : movieArray">
+          <div class="please-select roomcursor roomsiconbg select-class1">
+            <a>
+              <h6 class="pl-2 pt-2 temp-heading-class text-uppercase headStyle"><b>TITLE : <span class="subHead">{{movie.title}}</span></b></h6>
+              <hr>
+              <img class="image_color room_img card-imageclass" src="https://ui-avatars.com/api/?name={{movie.title}}&rounded=true"
+                alt="{{movie.title}}" />
+            </a>
+            <!-- <h6 class="pl-2 pt-2 temp-heading-class text-uppercase"></h6> -->
+            <div class=" pl-2 pt-1 d-none d-lg-block d-print-block"><span class="text-uppercase"><b>description</b> :</span> {{movie.description | slice:0:250}}</div>
+            
+            <div class=" pl-2 pt-4 d-none d-lg-block d-print-block" *ngIf="movie.genres !=''"><span class="text-uppercase"><b>genere</b> :</span> {{movie.genres | slice:0:15}}</div>
+            <div class=" pl-2 pt-4 d-none d-lg-block d-print-block" *ngIf="movie.genres ===''"><span class="text-uppercase"><b>genere</b> :</span> N/A</div>
+
+          </div>
+          <br>
+        </div>
+
+        <div class="modal fade" id="componentmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-lg modal-xl modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title pl-2 pt-2 temp-heading-class text-uppercase headStyle" id="exampleModalLongTitle"><b>TITLE : <span class="subHead">{{title}}</span></b></h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                </div>
+                <div class="modal-body">
+                    <div><img class="image_color room_img card-imageclass" src="https://ui-avatars.com/api/?name={{title}}&rounded=false" alt="{{title}}" /></div>   
+                    <div><span class="text-uppercase"><b>description</b> :</span> {{description}}</div>
+
+                </div>
+                <div class="modal-footer" style="justify-content: left !important;">
+                    <h6 class="pl-2 pt-2 temp-heading-class text-uppercase" *ngIf="genres !=''">genere : {{genres}}</h6>
+                    <h6 class="pl-2 pt-2 temp-heading-class text-uppercase" *ngIf="genres ===''">genere : N/A</h6>
+
+                </div>
+               
+
+
+                
+              </div>
+            </div>
+            </div>
+      </div>
+      <hr>
+</div>
