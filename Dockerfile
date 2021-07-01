@@ -25,7 +25,9 @@ FROM nginx:alpine
 COPY --from=base /app/dist/onefin-project /usr/share/nginx/html
 
 # expose port 80
-EXPOSE 80
+EXPOSE 8080
+
+RUN sed -i 's/^\(.*listen.*\)80;/\18080;/' /etc/nginx/conf.d/default.conf
 
 # run nginx
 CMD ["nginx", "-g", "daemon off;"]
